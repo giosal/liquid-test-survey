@@ -1,0 +1,54 @@
+body {
+	font-size: 14px;
+	font-family: Helvetica;
+}
+
+h1 {
+	text-align: center;
+	color: grey;
+	font-size: 24px;
+	font-family: Verdana;
+}
+
+h2 {
+	text-align: center;
+	color: black;
+	font-size: 16px;
+	font-family: Verdana;
+}
+
+p {
+	color: black;
+	font-size: 12px;
+	font-family: Helvetica;
+}
+
+table, th, tr, td {
+	margin: 150px auto;
+	background-color: #CCCCCC;
+}
+
+tr, td {
+	text-align: center;
+}
+
+img {
+	margin: auto;
+	width: 100%;
+}
+
+.language-selector {
+	margin: auto;
+	width: 50%;
+}
+
+footer {
+	position: absolute;
+   	bottom: 0;
+   	width: 100%;
+   	height: 20px;   /* Height of the footer */
+	text-align: center;
+	font-size: 8px;
+	font-family: Helvetica;
+    display: block;
+}
