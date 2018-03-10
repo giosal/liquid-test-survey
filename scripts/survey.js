@@ -26,9 +26,7 @@ function survey(){
         	}, {
         		text: "Where do you live?",
         		responses: [
-        			{text: 'City'}, 
-        			{text: 'Countryside'},
-        			{text: 'Do not identify'},
+        			{text: 'Please enter your location'},
         		]
         	}
         ]
@@ -39,7 +37,7 @@ function survey(){
 		 data: { 
 			 survey: survey,
 			 questionIndex: 0,
-			 userResponses: Array(survey.questions.length).fill(false),
+			 userResponses: Array(survey.questions.length),
 		 }, 
 		 methods: {
 			    // Go to next question
@@ -48,8 +46,10 @@ function survey(){
 			 },
 			    // Go to previous question
 			 prev: function() {
+				 
 				 this.questionIndex--;
 			 }
+			 
 		 }// Attach quiz to Vue data
 	 });
 }

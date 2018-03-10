@@ -39,9 +39,14 @@ tr, td {
 	text-align: center;
 }
 
+img {
+	margin: auto;
+	width: 100%;
+}
+
 button {
 	transition: 0.3s ease all;
-	display: block;
+	display: inline-block;
 	text-align: center;
 	cursor: pointer;
   	width: 75px;
@@ -49,12 +54,22 @@ button {
 	box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.2);
 }
 
-img {
-	margin: auto;
-	width: 100%;
+#left {
+	margin: 20px auto auto auto;
 }
 
-.language-selector {
+#right {
+	margin: 20px auto auto 50px;
+}
+
+#container{
+}
+
+#survey {
+	margin: auto auto auto 50px;
+}
+
+#language-selector {
 	margin: auto;
 	width: 50%;
 }

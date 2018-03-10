@@ -17,37 +17,37 @@
 		    <!-- Vue's data.title displayed here -->
 	    	<h1>{{ survey.title }}</h1>
   		
-  
-  		<!-- Load Vue script -->
-  		
-  		<!-- On load, init Vue -->
-  		
-		<div v-for="(question, index) in survey.questions">
-			<div v-show="index === questionIndex">
-				<h3>{{ question.text }}</h3>
-				<!-- Responses: display a li for each possible response with a radio button -->
-			    <ol>
-					<li v-for="response in question.responses">
-						<label>
-							<input type="radio" v-bind:value="response" 
-												v-bind:name="index" 
-												v-model="userResponses[index]"> {{response.text}}
-						</label>
-					</li>
-				</ol>
-				<button v-if="questionIndex > 0" v-on:click="prev">
-					Previous
-				</button>
-				<button v-on:click="next">
-					Next
-				</button>
+			<div id="survey" v-for="(question, index) in survey.questions">
+			
+				<div v-show="index === questionIndex">
+					<h3>{{ question.text }}</h3>
+					<div v-if="questionIndex === 2">
+						<input type="text" v-model="userResponses[2]" placeholder="Please enter your location:"> 
+					</div>
+					<div v-else>
+						<!-- Responses: display a li for each possible response with a radio button -->
+				    	<ol>
+							<li v-for="response in question.responses">
+								<label>
+									<input type="radio" v-bind:value="response" 
+														v-bind:name="index" 
+														v-model="userResponses[index]"> {{response.text}}
+								</label>
+							</li>
+						</ol>
+					</div>
+					<div id="container">
+						<button id="left" v-if="questionIndex > 0" v-on:click="prev">Previous</button>
+						<button id="right" v-on:click="next">Next</button>
+					</div>
+				</div>
 			</div>
+			<div v-show="questionIndex === survey.questions.length">
+    			<h2>Thank you for taking our survey!</h2>
+	    		<p>{{ userResponses }}</p>]
+  			</div>
 		</div>
-		<div v-show="questionIndex === survey.questions.length">
-    		<h2>Thank you for taking our survey!</h2>
-    		<p>{{ userResponses }}</p>]
-  		</div>
-		</div>
+		
 		<footer>&copy; 2018 George Salukvadze for Project A and Liquid</footer>
 	</body>
 </html>
