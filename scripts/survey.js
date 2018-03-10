@@ -28,6 +28,34 @@ function survey(){
         		responses: [
         			{text: 'Please enter your location'},
         		]
+        	}, {
+        		text: "Do you like to shop?",
+        		responses: [
+        			{text: 'Yes'},
+        			{text: 'No'},
+        		]
+        	}, {
+        		text: "Select your favorite things to buy:",
+        		responses: [
+        			{text: 'Clothing'},
+        			{text: 'Lingerie'},
+        			{text: 'Shoes'},
+        			{text: 'Devices'},
+        			{text: 'Cars'},
+        		]
+        	}, {
+        		text: "Please select your favorite brands:",
+        		responses: [
+        			{text: 'Sandro'},
+        			{text: 'Maje'},
+        			{text: 'Agent Provocateur'},
+        			{text: 'Aubade'},
+        			{text: 'Chantelle'},
+        			{text: 'Sony'},
+        			{text: 'Ferrari'},
+        			{text: 'BMW'},
+        			{text: 'Asus'},
+        		]
         	}
         ]
 	 };
