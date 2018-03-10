@@ -66,6 +66,8 @@ function survey(){
 			 survey: survey,
 			 questionIndex: 0,
 			 userResponses: Array(survey.questions.length),
+			 question4: Array(5),
+			 question5: Array(9),
 		 }, 
 		 methods: {
 			    // Go to next question
@@ -74,7 +76,6 @@ function survey(){
 			 },
 			    // Go to previous question
 			 prev: function() {
-				 
 				 this.questionIndex--;
 			 }
 			 

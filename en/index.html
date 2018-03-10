@@ -24,6 +24,14 @@
 					<div v-if="questionIndex === 2">
 						<input type="text" v-model="userResponses[2]" placeholder="Please enter your location:"> 
 					</div>
+					<div v-else-if="questionIndex === 4">
+						<select v-model="question4" multiple>
+							<option v-for="response in question.responses"> {{ response.text }} </option></select>
+					</div>
+					<div v-else-if="questionIndex === 5">
+						<select v-model="question5" multiple>
+							<option v-for="response in question.responses"> {{ response.text }} </option></select>
+					</div>
 					<div v-else>
 						<!-- Responses: display a li for each possible response with a radio button -->
 				    	<ol>
@@ -31,7 +39,7 @@
 								<label>
 									<input type="radio" v-bind:value="response" 
 														v-bind:name="index" 
-														v-model="userResponses[index]"> {{response.text}}
+														v-model="userResponses[index]"> {{ response.text }}
 								</label>
 							</li>
 						</ol>
@@ -44,7 +52,9 @@
 			</div>
 			<div v-show="questionIndex === survey.questions.length">
     			<h2>Thank you for taking our survey!</h2>
-	    		<p>{{ userResponses }}</p>]
+	    		<p>{{ userResponses }}</p>
+	    		<p>{{ question4 }}</p>
+	    		<p>{{ question5 }}</p>
   			</div>
 		</div>
 		
