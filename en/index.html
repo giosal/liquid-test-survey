@@ -48,6 +48,8 @@
 					</div>
 				</div>
 			</div>
+			<!-- Couldn't display text properly, when using userResponses.text - comes up with empty cell,
+			when using userResponses[index].text, receive an error that userResponses[index] is undefined -->
 			<div v-show="questionIndex === survey.questions.length">
     			<h2>Thank you for taking our survey!</h2>
     			<table>

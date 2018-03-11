@@ -63,6 +63,7 @@ function survey(){
 			 survey: survey,
 			 questionIndex: 0,
 			 userResponses: Array(survey.questions.length),
+			 //Couldn't construct multi-dimensional array, hence separate arrays for question 4 and 5
 			 question4: Array(5),
 			 question5: Array(9),
 		 }, 
