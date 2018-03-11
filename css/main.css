@@ -74,6 +74,33 @@ button {
 	width: 50%;
 }
 
+a.homepage:link {
+	margin: 20px auto auto auto;
+	text-align: center;
+	color: black;
+	font-family: Verdana;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+a.homepage:visited {
+	margin: 20px auto auto auto;
+	text-align: center;
+	color: grey;
+	font-family: Verdana;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+a.homepage:hover {
+	margin: 20px auto auto auto;
+	text-align: center;
+	color: orange;
+	font-family: Verdana;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
 footer {
 	position: absolute;
    	bottom: 0;

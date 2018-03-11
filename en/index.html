@@ -13,9 +13,9 @@
 	</head>
 	
 	<body>
-  		<div id="app">
+		<div id="app">
 	    	<h1>{{ survey.title }}</h1>
-  		
+  			<div align="center"><a class="homepage" href="../index.html">Go to Homepage</a></div>
 			<div id="survey" v-for="(question, index) in survey.questions">
 			
 				<div v-show="index === questionIndex">
