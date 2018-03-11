@@ -66,13 +66,24 @@ function survey(){
 			 question4: Array(5),
 			 question5: Array(9),
 		 }, 
+		 mounted: function() {
+		     var vm = this;
+		     window.addEventListener('popstate', function(event) {
+		         vm.questionIndex = (event.state || {questionIndex: 0}).questionIndex;
+		     });
+		 },
 		 methods: {
 			 next: function() {
 				 this.questionIndex++;
+				 this.updateHistory();
 			 },
 			 prev: function() {
 				 this.questionIndex--;
-			 }
+				 this.updateHistory();
+			 },
+			 updateHistory: function() {
+		         history.pushState({questionIndex: this.questionIndex}, "Question " + this.questionIndex);
+		     }
 		 }
 	 });
 }
