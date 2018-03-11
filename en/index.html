@@ -50,7 +50,15 @@
 			</div>
 			<div v-show="questionIndex === survey.questions.length">
     			<h2>Thank you for taking our survey!</h2>
-	    		<p>{{ userResponses }}</p>
+    			<table>
+	    			<tr v-for="(question, index) in survey.questions">
+	    				<td>{{ question.text }}</td>
+	    				<td v-if="index === 4">{{ question4 }}</td>
+	    				<td v-else-if="index === 5">{{ question5 }}</td>
+	    				<td v-else>{{ userResponses[index] }}</td>
+	    			</tr>
+	    			
+	    		</table>
 	    		<p>{{ question4 }}</p>
 	    		<p>{{ question5 }}</p>
   			</div>

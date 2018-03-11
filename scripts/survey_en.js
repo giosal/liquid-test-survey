@@ -85,5 +85,6 @@ function survey(){
 		         history.pushState({questionIndex: this.questionIndex}, "Question " + this.questionIndex);
 		     }
 		 }
+		 
 	 });
 }
